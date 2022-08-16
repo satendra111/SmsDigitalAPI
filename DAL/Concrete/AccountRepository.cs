@@ -1,17 +1,6 @@
-﻿using AutoMapper;
-using AutoMapper.QueryableExtensions;
-using Core.Services;
-using DAL.Abstract;
-using DAL.DbContexts;
-using DAL.Entities;
+﻿using DAL.Abstract;
 using Domain.EntityModel;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DAL.Concrete
 {

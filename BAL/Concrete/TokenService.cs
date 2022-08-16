@@ -20,8 +20,12 @@ namespace SelfOnBoarding.Bll.Concrete
         {
             this.appSettings = appSettings.Value;  
         }
-    
 
+        /// <summary>
+        /// GenerateToken
+        /// </summary>
+        /// <param name="userEntityModel"></param>
+        /// <returns>string</returns>
         public string GenerateToken(UserEntityModel userEntityModel)
         {
             var tokenHandler = new JwtSecurityTokenHandler();

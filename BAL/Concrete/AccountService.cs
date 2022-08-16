@@ -1,16 +1,7 @@
 ﻿using BAL.Abstract;
 using Core.Concrete;
-using Core.Services;
 using DAL.Abstract;
-using Domain.CommonEntity;
 using Domain.Dto;
-using Domain.EntityModel;
-using Microsoft.Extensions.Options;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace BAL.Concrete
 {
@@ -29,6 +20,13 @@ namespace BAL.Concrete
             this.tokenService = tokenService;
            
         }
+        /// <summary>
+        /// SignIn method 
+        /// </summary>
+        /// <param name="email"></param>
+        /// <param name="password"></param>
+        /// <returns>Task<SignInResponse></returns>
+
         public async Task<SignInResponse> SignInAsync(string email, string password)
         {
 

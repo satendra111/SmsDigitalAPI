@@ -22,6 +22,12 @@ namespace DAL.Concrete
         private ApiDbContext dbContext;
         private readonly IMapper mapper;
         private ICustomPaging<CityDetailEntityModel> customPaging;
+        /// <summary>
+        /// CityRepository constructor
+        /// </summary>
+        /// <param name="context"></param>
+        /// <param name="mapper"></param>
+        /// <param name="customPaging"></param>
         public CityRepository(ApiDbContext context, IMapper mapper, ICustomPaging<CityDetailEntityModel> customPaging)
         {
             this.dbContext = context;
@@ -29,6 +35,12 @@ namespace DAL.Concrete
             this.customPaging = customPaging;
 
         }
+        /// <summary>
+        /// Add and Update City
+        /// </summary>
+        /// <param name="cityDetailEntityModel"></param>
+        /// <returns>Task<CityDetailEntityModel></returns>
+       
         public async Task<CityDetailEntityModel> AddUpdateCityAsync(CityDetailEntityModel cityDetailEntityModel)
         {
             try
@@ -56,7 +68,12 @@ namespace DAL.Concrete
             }
 
         }
-
+        /// <summary>
+        /// Delete City 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>Task<bool></returns>
+       
         public async Task<bool> DeleteCityAsync(int id)
         {
             try
@@ -77,7 +94,12 @@ namespace DAL.Concrete
 
             }
         }
-
+        /// <summary>
+        /// Get All City
+        /// </summary>
+        /// <param name="searchinfo"></param>
+        /// <returns>Task<DataResult<CityDetailEntityModel>></returns>
+     
         public async Task<DataResult<CityDetailEntityModel>> GetAllCityAsync(CityDetailSearch searchinfo)
         {
             try
@@ -104,6 +126,11 @@ namespace DAL.Concrete
             }
 
         }
+        /// <summary>
+        /// Get City
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>Task<CityDetailEntityModel></returns>
 
         public async Task<CityDetailEntityModel> GetCityAsync(int id)
         {
