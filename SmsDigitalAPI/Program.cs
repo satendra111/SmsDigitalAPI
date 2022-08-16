@@ -63,7 +63,6 @@ ConfigurationManager Configuration = builder.Configuration;
 
 builder.Services.Configure<ConnectionStrings>(Configuration.GetSection("ConnectionStrings"));
 builder.Services.Configure<JwtSetting>(Configuration.GetSection("JwtSetting"));
-builder.Services.Configure<EncryptionSetting>(Configuration.GetSection("EncryptionSetting"));
 builder.Services.Configure<UserEntityModel>(Configuration.GetSection("UserEntityModel"));
 
 
